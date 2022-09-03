@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sasya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+ 	 <div class="container-fluid">
+    		<a class="navbar-brand text-white" href="#">Sasya</a>
+    		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      		<span class="navbar-toggler-icon"></span>
+    		</button>
+    	<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      	<div class="navbar-nav">
+      		<a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+      		<a class="nav-link text-white" style="margin-left: 1rem;" href="#upload">Upload</a>
+      		<a class="nav-link text-white" style="margin-left: 1rem;" href="#id">Medicinal plants</a>
+      		<a class="nav-link text-white" style="margin-left: 1rem;" href="#foot">Contact</a>
+      	</div>
+    	</div>
+  </div>
+</nav>
+<div class="bg-image" id="home">
+	<h3>Sasya</h3>
+	<p>A website designed to identify 32 different plants</p>
+</div>
+<div class="upload" id="upload">
+  <form action="/predict" method="POST">
+	<h4>choose an image file of jpg extention</h4> 
+	<input type="file" id="upload" accept="image/jpg"/>
+
+  <!--script>
+    const fileInput = document.getElementById('upload');
+    fileInput.onchange = () => {
+    const selectedFile = fileInput.files[0];
+    console.log(selectedFile);
+  }
+  </script-->
+	<!--button-->
+	<br><br>
+	<center><button type="button" class="btn btn-light btn-outline-dark btn-block" id="link" onclick="predict()" download="Test">Let's get started</button></center>
+</br>
+  <center><h3 id="value"></h3></center>
+<script>
+  function predict(){
+  var val="Peach Tree";
+  document.getElementById("value").innerHTML=val;
+  }
+</script>
+</form>
+  <!--h3><center> {{prediction}}</center></h3-->
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="container my-5">
+  <!-- Section: Basic example -->
+  <section class="medicinal">
+    <div class="id">
+    <div class="container my-5">
+      <!-- Carousel wrapper -->
+      <div
+           id="carouselBasicExample"
+           class="carousel slide carousel-dark text-center"
+           data-mdb-ride="carousel"
+           >
+        <div>
+          <center>
+            <H2>Medicinal Remidies</H2>
+            <p>six different categories of medicinal remidies</p>
+          </center>
+        </div>
+
+        <div class="carousel-inner py-4">
+
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="card"><a href="bulbs.html" id="no-line">
+                    <img
+                         src="../images/bulbs.jpg"
+                         class="card-img-top"
+                         alt="..."
+                         />
+                    <div class="card-body">
+                      <h5 class="card-title">Bulbs</h5>
+                      <p class="card-text">
+                        Here are some Blubs remedies and health information!!
+
+                      </p></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card"><a href="flowers.html" id="no-line">
+                    <img
+                         src="../images/flowers.jpg"
+                         class="card-img-top"
+                         alt="..."
+                         />
+                    <div class="card-body">
+                      <h5 class="card-title">Flowers</h5>
+                      <p class="card-text">
+                        Here are some Flowers remedies and health information!!
+                      </p>
+                    </div></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card"><a href="fruits.html" id="no-line">
+                    <img
+                         src="../images/fruits.jpg"
+                         class="card-img-top"
+                         alt="..."
+                         />
+                    <div class="card-body">
+                      <h5 class="card-title">Fruits</h5>
+                      <p class="card-text">
+                        Here are some Fruits remedies and health information!!
+                      </p>
+                    </div></a>
+                  </div>
+                </div>
+                <br>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card"><a href="leaves.html" id="no-line">
+                    <img
+                         src="../images/leaves.jpg"
+                         class="card-img-top"
+                         alt="..."
+                         />
+                    <div class="card-body">
+                      <h5 class="card-title">Leaves</h5>
+                      <p class="card-text">
+                        Here are some Leaves remedies and health information!!
+                      </p>
+                    </div>
+                  </div></a>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card"><a href="roots.html" id="no-line">
+                    <img
+                         src="../images/roots.jpg"
+                         class="card-img-top"
+                         alt="..."
+                         />
+                    <div class="card-body">
+                      <h5 class="card-title">Roots</h5>
+                      <p class="card-text">
+                        Here are some Roots remedies and health information!!
+                      </p>
+                    </div></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card"><a href="seeds.html" id="no-line">
+                    <img
+                         src="../images/seeds.jpg"
+                         class="card-img-top"
+                         alt="..."
+                         />
+                    <div class="card-body">
+                      <h5 class="card-title">Seeds</h5>
+                      <p class="card-text">
+                        Here are some Seeds remedies and health information!!
+                      </p>
+                    </div></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+</div>
+<!-- Footer -->
+<footer class="text-center text-white bg-dark">
+<br>
+
+  <!-- Section: Useful Links  -->
+  <section id="foot" class="links">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+		
+            <i class="fas fa-gem me-3"></i>Sasya
+          </h6>
+          <p>
+           Sasya is a predicting website. I have used HTML, CSS, BOOTSTRAP,FLASK and JAVASCRIPT..
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            links
+          </h6>
+          <p>
+            <a href="#home" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#upload" class="text-reset">upload</a>
+          </p>
+          <p>
+            <a href="#" class="text-reset">Medicinal remidies</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i>NHCE,Bangalore</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            image@sasya.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 91 9876543210</p>
+          <p><i class="fas fa-print me-3"></i> + 91 0987654321</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Ritika Hiremath</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+  </body>
+</html>

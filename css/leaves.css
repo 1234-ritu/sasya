@@ -1,0 +1,21 @@
+#flow-home{
+    background-image: url("../images/leaves/leaves.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:550px;
+    text-align:center;
+}
+.flow-home h3{
+    font-family: "Times new";
+    font-style: italic;
+    font-size:80px;
+    color: white;
+    text-align:center;
+    padding-top:150px;
+}
+#no-line
+{
+  color: black;
+  text-decoration:none;
+}
